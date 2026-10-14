@@ -1,0 +1,15 @@
+:root {
+    --lienzo: #FAFAF7;
+    --superficie: #FFFFFF;
+    --coral: #FF5A4E;
+    --coral-hover: #E84D41;
+    --salvia: #DDE5D6;
+    --salvia-suave: #EDF2E8;
+    --carbon: #1A1A1A;
+    --carbon-suave: #4A4A4A;
+    --borde: #E8E8E2;
+    --borde-tarjeta: #EAEAE4;
+    --radio: 12px;
+    --sombra-1: 0 4px 16px -2px rgba(26, 26, 26, 0.04), 0 1px 3px 0 rgba(26, 26, 26, 0.02);
+    --sombra-2: 0 12px 28px -4px rgba(26, 26, 26, 0.08), 0 4px 8px -2px rgba(26, 26, 26, 0.03);
+}
