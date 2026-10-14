@@ -40,6 +40,11 @@
         if (contactLink) {
             contactLink.href = `${basePath}contactanos/index.html`;
         }
+
+        const aboutLink = container.querySelector('#footer-about-link');
+        if (aboutLink) {
+            aboutLink.href = `${basePath}quienes-somos/index.html`;
+        }
     }
 
     /**
