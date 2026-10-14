@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,15 +9,31 @@
 
     <link rel="stylesheet" href="../css/global.css">
     <link rel="stylesheet" href="../css/catalogo.css">
-    <link rel="stylesheet" href="../css/components/header.css">
-    <link rel="stylesheet" href="../css/components/footer.css">
-    <script src="../js/catalogo.js" defer></script>
 
+    <script src="../js/catalogo.js" defer></script>
 </head>
 
 <body>
     <!-- Encabezado del catálogo -->
-    <header class="bloque cabecera" id="encabezado del sitio"></header>
+    <header class="catalog-header">
+        <div class="container header-content">
+            <a href="../index.html" class="brand">
+                TrendyShop<span class="brand-dot">.</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Navegación principal">
+                <a href="../index.html">Inicio</a>
+                <a href="index.html" class="active">Catálogo</a>
+                <a href="../quienes-somos/index.html">Quiénes somos</a>
+                <a href="../contactanos/index.html">Contáctanos</a>
+            </nav>
+
+            <a href="../carrito/index.html" class="cart-link">
+                Carrito <span id="cart-count">0</span>
+            </a>
+        </div>
+    </header>
+
     <main>
         <!-- Presentación del catálogo -->
         <section class="catalog-hero">
@@ -141,10 +158,14 @@
     </main>
 
     <!-- Pie de página -->
-    <footer class="bloque pie" id="pie del sitio"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/components/header.js"></script>
-    <script src="../js/components/footer.js"></script>
+    <footer class="catalog-footer">
+        <div class="container">
+            <a href="../index.html" class="brand">
+                TrendyShop<span class="brand-dot">.</span>
+            </a>
 
+            <p>Tu estilo, tu identidad.</p>
+        </div>
+    </footer>
 </body>
 </html>
