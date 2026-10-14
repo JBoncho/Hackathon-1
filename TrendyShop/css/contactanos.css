@@ -1,0 +1,55 @@
+body {
+    background-color: var(--lienzo);
+    color: var(--carbon);
+}
+
+.card {
+    background-color: var(--superficie) !important;
+    border: 1px solid var(--borde-tarjeta) !important;
+    border-radius: var(--radio) !important;
+    box-shadow: var(--sombra-1) !important;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: var(--sombra-2) !important;
+}
+
+.btn-primary, 
+.btn-danger, 
+.theme-primary {
+    background-color: var(--coral) !important;
+    border-color: var(--coral) !important;
+    color: #FFFFFF !important;
+    border-radius: var(--radio) !important;
+}
+
+.btn-primary:hover, 
+.btn-danger:hover, 
+.theme-primary:hover {
+    background-color: var(--coral-hover) !important;
+    border-color: var(--coral-hover) !important;
+}
+
+h2, h3, h4, h5{
+    color: var(--carbon);
+}
+h6{
+    color: var(--coral) !important;
+}
+
+.text-muted {
+    color: var(--carbon-suave) !important;
+}
+
+.form-control, .form-select {
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--carbon);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 0.25rem rgba(255, 90, 78, 0.15);
+}
