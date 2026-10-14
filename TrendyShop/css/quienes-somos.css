@@ -1,0 +1,36 @@
+.presentacion-seccion {
+  background-color: #FAFAF7;
+}
+
+.valores-seccion {
+  background-color: #EDF2E8;
+}
+
+.presentacion-portada {
+  height: 360px;
+}
+
+.equipo-foto {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 4px 12px #00000014;
+}
+
+.tienda-imagen {
+  height: 190px;
+  object-fit: cover;
+}
+
+.tarjeta-elevada {
+  position: relative;
+  top: 0;
+  transition: top 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-elevada:hover {
+  top: -4px;
+  box-shadow: 0 10px 24px #00000014 !important;
+}
