@@ -18,18 +18,22 @@ const aplicacionPrincipal = {
     },
 
     "sincronizar contador": function() {
-        const elementoContador = document.getElementById("contador del carrito") || document.querySelector(".contador.del.carrito");
-        if (!elementoContador) {
-            return;
-        }
+        const elementoContador = document.getElementById("header-cart-count") || document.getElementById("contador del carrito") || document.querySelector(".contador.del.carrito");
 
         let totalPrendas = 0;
         if (window["servicio carrito"]) {
             totalPrendas = window["servicio carrito"]["obtener conteo"]();
         }
 
-        elementoContador.textContent = totalPrendas;
-        elementoContador.style.display = totalPrendas > 0 ? "inline-flex" : "none";
+        if (elementoContador) {
+            elementoContador.textContent = totalPrendas;
+            elementoContador.style.display = totalPrendas > 0 ? "inline-flex" : "none";
+        }
+
+        /* Notificar a la cabecera mediante el evento de actualizacion */
+        window.dispatchEvent(new CustomEvent("trendy:cart-updated", {
+            detail: { count: totalPrendas }
+        }));
     },
 
     "conectar botones catalogo": function() {
