@@ -1,0 +1,210 @@
+/* ==========================================================================
+   TrendyShop - Header Component Styles
+   ========================================================================== */
+
+/* 1. Top Announcement Bar */
+.header-announcement {
+    background-color: var(--carbon);
+    color: var(--lienzo);
+    font-size: 0.75rem;
+    letter-spacing: 0.025em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.announcement-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--coral);
+    animation: announcement-pulse 2s infinite ease-in-out;
+}
+
+@keyframes announcement-pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(1.3);
+    }
+}
+
+/* 2. Brand Logo */
+.header-logo-link {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.header-logo-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+    border-radius: 8px;
+    transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease;
+}
+
+/* T-Logo Hover Animation*/
+.header-logo-link:hover .header-logo-icon {
+    transform: translateY(-2px) scale(1.08) rotate(-4deg);
+    box-shadow: 0 4px 12px rgba(26, 26, 26, 0.16), 0 0 0 2px rgba(255, 90, 78, 0.35);
+}
+
+.header-logo-link:active .header-logo-icon {
+    transform: translateY(0) scale(0.95) rotate(0deg);
+    transition-duration: 0.1s;
+}
+
+.logo-part-trendy {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--carbon);
+}
+
+.logo-part-shop {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--coral);
+}
+
+.logo-part-country {
+    font-size: 0.45rem;
+    font-weight: 700;
+    color: var(--coral);
+    letter-spacing: 0.12em;
+    margin-left: 3px;
+    align-self: flex-start;
+    padding-top: 2px;
+}
+
+/* 3. Navigation Links */
+.header-nav-links .nav-link {
+    color: var(--carbon-suave);
+    font-size: 0.94rem;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.header-nav-links .nav-link:hover {
+    color: var(--coral);
+}
+
+.header-nav-links .nav-link.active {
+    color: var(--coral) !important;
+    font-weight: 600;
+    border-bottom-color: var(--coral);
+}
+
+/* 4. Search Form */
+@media (min-width: 992px) {
+    .header-search-form {
+        width: 220px !important;
+    }
+}
+
+.header-search-icon {
+    left: 0.85rem;
+    color: var(--carbon-suave);
+    font-size: 0.9rem;
+}
+
+.header-search-input {
+    background-color: var(--lienzo) !important;
+    border-color: var(--borde) !important;
+    color: var(--carbon) !important;
+    font-size: 0.85rem;
+    padding-left: 2.25rem !important;
+    height: 38px;
+}
+
+.header-search-input:focus {
+    background-color: var(--superficie) !important;
+    border-color: var(--coral) !important;
+    box-shadow: 0 0 0 3px rgba(255, 90, 78, 0.15) !important;
+}
+
+/* 5. Action Buttons & Cart Badge*/
+.header-action-btn {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: var(--carbon-suave) !important;
+    font-size: 1.15rem;
+    line-height: 1;
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-action-btn i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.header-action-btn i::before {
+    vertical-align: 0;
+}
+
+.header-action-btn:hover {
+    background-color: var(--salvia-suave) !important;
+    color: var(--coral) !important;
+}
+
+.header-cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 3px;
+    background-color: var(--coral) !important;
+    color: var(--superficie) !important;
+    font-size: 0.62rem;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 3px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--superficie);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+}
+
+/* 6. Mobile Responsiveness */
+@media (max-width: 991.98px) {
+    .header-nav-links {
+        padding-top: 0.75rem;
+        margin-top: 0.5rem;
+        border-top: 1px solid var(--borde);
+    }
+
+    .header-nav-links .nav-link {
+        border-bottom: none;
+        border-left: 3px solid transparent;
+        padding: 0.6rem 0.75rem !important;
+    }
+
+    .header-nav-links .nav-link.active {
+        border-left-color: var(--coral);
+        background-color: var(--salvia-suave);
+        border-radius: 0 var(--radio) var(--radio) 0;
+    }
+
+    .header-actions-container {
+        padding-top: 0.75rem;
+        border-top: 1px solid var(--borde);
+    }
+}
