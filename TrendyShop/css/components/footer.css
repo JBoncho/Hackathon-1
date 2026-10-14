@@ -1,0 +1,73 @@
+/* ==========================================================================
+   TrendyShop - Footer Component Styles
+   Custom brand styles extending Bootstrap 5 utilities (DRY)
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--lienzo);
+    border-top-color: var(--borde) !important;
+}
+
+.footer-border-bottom {
+    border-bottom-color: var(--borde) !important;
+}
+
+/* Brand Logo (Footer Sizing & Hover) */
+.footer-logo-link {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.footer-logo-link:hover {
+    opacity: 0.9;
+}
+
+.footer-logo-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.footer-brand-desc {
+    max-width: 360px;
+    line-height: 1.5;
+    color: var(--carbon-suave) !important;
+}
+
+/* Location Badges */
+.footer-badge {
+    background-color: var(--salvia-suave) !important;
+    color: var(--carbon) !important;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 0.35em 0.65em;
+}
+
+/* Navigation & Policy Links */
+.footer-link {
+    color: var(--carbon-suave) !important;
+    transition: color 0.15s ease;
+}
+
+.footer-link:hover {
+    color: var(--coral) !important;
+    text-decoration: underline !important;
+}
+
+.footer-link-highlight {
+    color: var(--coral) !important;
+}
+
+.footer-link-highlight:hover {
+    text-decoration: underline !important;
+}
+
+/* Payment Brand Badges */
+.text-nequi {
+    color: #380453 !important;
+}
+
+.text-addi {
+    color: #00D4B2 !important;
+}
