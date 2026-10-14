@@ -13,9 +13,76 @@
 </head>
 <body class="cuerpo principal" id="cuerpo principal">
     <header class="bloque cabecera" id="encabezado del sitio"></header>
+<!-- Falta el Navbar -->
+    <main class="contenedor principal" id="contenido de inicio">
 
-    <main class="contenedor principal" id="contenido de inicio"></main>
+        <!-- container 1: Banner principal -->
+        <section class="container hero-seccion">
+            <div class="hero-banner">
+                <span class="insignia insignia-salvia">Nueva colección</span>
+                <h1 class="hero-titulo">Tu estilo, tu ritmo, tu ciudad</h1>
+                <p class="hero-texto">
+                    Ropa y accesorios con precios en pesos, envíos claros y atención real.
+                </p>
+                <div class="hero-botones">
+                    <a href="catalogo/index.html" class="boton boton-primario">Ver catálogo</a>
+                    <a href="contactanos/index.html" class="boton boton-claro">Escríbenos</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- conrainer 2: confianza para remendar error 3 -->
+        <section class="container">
+            <div class="modulo-confianza">
+                Envíos a todo el país • Pagos seguros con PSE, Addi o Wompi
+            </div>
+        </section>
+
+        <!-- container 3: Destacar Novedades como shein -->
+        <section class="container seccion">
+            <h2 class="seccion-titulo">Novedades</h2>
+            <p class="seccion-subtitulo">Lo último que llegó a TrendyShop.</p>
+            <div id="lista-novedades" class="row row-cols-2 row-cols-lg-4 g-3 g-lg-4"></div>
+            <div class="text-center mt-4">
+            <a href="catalogo/index.html" class="boton boton-secundario">Ver todo el catálogo</a>
+            </div>
+        </section>
+
+        <!-- Container 4: Tranquilidad enfoque en el error 2 y 3 -->
+        <section class="container seccion">
+            <h2 class="seccion-titulo">Compra con tranquilidad</h2>
+            <div class="row g-3 g-lg-4 mt-1">
+                <div class="col-12 col-md-4">
+                <article class="confianza-tarjeta">
+                    <div class="confianza-icono"><i class="bi bi-truck"></i></div>
+                    <h3 class="confianza-titulo">Envíos claros</h3>
+                    <p>Te decimos el tiempo de entrega antes de pagar.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="confianza-tarjeta">
+                    <div class="confianza-icono"><i class="bi bi-arrow-return-left"></i></div>
+                    <h3 class="confianza-titulo">Devoluciones simples</h3>
+                    <p>Políticas fáciles de entender, sin letra pequeña.</p>
+                    </article>
+                </div>
+                <div class="col-12 col-md-4">
+                    <article class="confianza-tarjeta">
+                    <div class="confianza-icono"><i class="bi bi-chat-dots"></i></div>
+                    <h3 class="confianza-titulo">Atención real</h3>
+                    <p>Escríbenos desde el formulario y te respondemos.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- boton volver arriba y queda fijo -->
+        <button id="btn-subir" class="btn-subir d-none" aria-label="Volver arriba">
+            <i class="bi bi-arrow-up"></i>
+        </button>
+
+    </main>
+<!-- Falta el footer -->
     <footer class="bloque pie" id="pie del sitio"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
