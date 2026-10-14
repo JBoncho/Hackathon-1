@@ -1,0 +1,467 @@
+.presentacion {
+  background: var(--lienzo);
+  color: var(--carbon);
+}
+
+.presentacion-titulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.presentacion-titulo span {
+  display: block;
+  color: var(--coral);
+  text-decoration: underline;
+  text-decoration-color: var(--salvia);
+  text-underline-offset: 6px;
+}
+
+.presentacion-descripcion {
+  color: var(--carbon-suave);
+  font-family: "Inter", sans-serif;
+  line-height: 1.7;
+}
+
+.indicador {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f5f3f1;
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.indicador-icono {
+  color: var(--coral);
+  font-size: 1.4rem;
+}
+
+.indicador h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.indicador p {
+  margin-bottom: 0;
+  color: var(--carbon-suave);
+  font-size: 0.75rem;
+}
+
+a.btn-presentacion-principal {
+    background-color: #ff5b61 !important;
+    color: #ffffff !important;
+    border: 2px solid #ff5b61 !important;
+}
+
+a.btn-presentacion-secundario {
+    background-color: #222222 !important;
+    color: #ffffff !important;
+    border: 2px solid #222222 !important;
+}
+
+a.btn-presentacion-principal:hover {
+    background-color: #e6444b !important;
+}
+
+a.btn-presentacion-secundario:hover {
+    background-color: #444444 !important;
+}
+
+.presentacion-imagen-contenedor {
+  position: relative;
+}
+
+.presentacion-imagen {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.presentacion-etiqueta {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  background: var(--superficie);
+  border-radius: var(--radio);
+}
+
+.presentacion-etiqueta h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.presentacion-etiqueta p {
+  margin-bottom: 0;
+  color: var(--carbon-suave);
+  font-size: 0.75rem;
+}
+
+.presentacion-etiqueta span {
+  padding: 6px 10px;
+  background: var(--salvia-suave);
+  border-radius: 50px;
+  font-size: 0.7rem;
+}
+
+.historia {
+  background: var(--superficie);
+  color: var(--carbon);
+}
+
+.historia-etiqueta {
+  color: var(--coral);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.historia-titulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.historia-descripcion {
+  max-width: 600px;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.historia-tarjeta {
+  padding: 24px;
+  background: var(--lienzo);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.historia-anio {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 6px 12px;
+  background: var(--salvia);
+  border-radius: 50px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.historia-tarjeta h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.historia-tarjeta p {
+  margin-bottom: 0;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.valores {
+  background: var(--salvia-suave);
+  color: var(--carbon);
+}
+
+.valores-etiqueta {
+  color: var(--coral);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.valores-titulo,
+.valores-subtitulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+}
+
+.valores-titulo {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.valores-descripcion {
+  max-width: 600px;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.valor-bloque {
+  height: 100%;
+  padding: 24px 28px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.valor-encabezado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.valor-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-bottom: 0;
+  color: var(--coral);
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.valor-bloque h3 {
+  margin-bottom: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.valor-bloque p,
+.valor-item p {
+  margin-bottom: 0;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.valores-subtitulo {
+  font-size: 1.5rem;
+}
+
+.valor-item {
+  height: 100%;
+  padding: 22px 16px;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+}
+
+.valor-item > i {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--coral);
+  font-size: 1.6rem;
+}
+
+.valor-item h4 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.equipo {
+  background: var(--lienzo);
+  color: var(--carbon);
+}
+
+.equipo-etiqueta {
+  color: var(--coral);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.equipo-titulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.equipo-descripcion {
+  max-width: 600px;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.equipo-tarjeta {
+  overflow: hidden;
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: var(--radio);
+  box-shadow: var(--sombra-1);
+}
+
+.equipo-foto {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  margin: 25px auto 0;
+  display: block;
+}
+
+.equipo-tarjeta h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.equipo-cargo {
+  color: var(--coral);
+  font-weight: 600;
+}
+
+.equipo-tarjeta p {
+  color: var(--carbon-suave);
+  line-height: 1.6;
+}
+
+.equipo-tarjeta p:last-child {
+  margin-bottom: 0;
+}
+
+.tiendas {
+  background: var(--superficie);
+  color: var(--carbon);
+}
+
+.tiendas-etiqueta {
+  color: var(--coral);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.tiendas-titulo {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+}
+
+.tiendas-descripcion {
+  max-width: 600px;
+  color: var(--carbon-suave);
+  line-height: 1.7;
+}
+
+.tienda-tarjeta {
+  height: 100%;
+  overflow: hidden;
+  background: var(--lienzo);
+  border: 1px solid var(--borde);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.tienda-tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.tienda-imagen {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.tienda-imagen img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.tienda-tarjeta:hover .tienda-imagen img {
+  transform: scale(1.04);
+}
+
+.tienda-sede {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  max-width: calc(100% - 24px);
+  padding: 6px 11px;
+  overflow: hidden;
+  color: #fff;
+  background: rgba(35, 35, 35, 0.78);
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Contenido */
+.tienda-contenido {
+  padding: 18px;
+}
+
+.tienda-contenido h3 {
+  margin-bottom: 8px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.tienda-contenido p {
+  color: var(--carbon-suave);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.tienda-direccion {
+  display: flex;
+  align-items: flex-start;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.tienda-direccion i {
+  flex-shrink: 0;
+  color: var(--coral);
+  font-size: 1rem;
+}
+
+.tienda-horarios {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--borde);
+}
+
+.tienda-horarios p {
+  margin-bottom: 4px;
+}
+
+.tienda-horarios strong {
+  color: var(--carbon);
+  font-weight: 700;
+}
+
+.tienda-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.tienda-etiquetas span {
+  display: inline-block;
+  padding: 5px 9px;
+  color: var(--carbon-suave);
+  background: var(--superficie);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  line-height: 1.4;
+}
