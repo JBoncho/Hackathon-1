@@ -12,11 +12,72 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body class="cuerpo principal" id="cuerpo principal">
-    <header class="bloque cabecera" id="encabezado del sitio"></header>
-<!-- Falta el Navbar -->
-    <main class="contenedor principal" id="contenido de inicio">
+    <header class="bloque cabecera" id="encabezado del sitio">
+        <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-sm sticky-top header-navbar py-2">
+            <div class="container-xl d-flex align-items-center justify-content-between">
+                <a class="navbar-brand d-flex align-items-center gap-2 me-3 me-lg-4 text-decoration-none user-select-none header-logo-link"
+                    href="index.html" id="header-logo-link">
+                    <img src="assets/images/logo-icon.png" alt="TrendyShop" class="header-logo-icon" id="header-logo-img">
+                    <div class="header-logo-brand d-flex flex-column justify-content-center">
+                        <div class="header-logo-main d-flex align-items-baseline">
+                            <span class="logo-part-trendy">TRENDY</span><span class="logo-part-shop">SHOP</span>
+                            <span class="logo-part-country">COLOMBIA</span>
+                        </div>
+                    </div>
+                </a>
 
-        <!-- container 1: Banner principal -->
+                <button class="navbar-toggler border-0 shadow-none p-2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#headerNavCollapse" aria-controls="headerNavCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation" id="header-mobile-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="headerNavCollapse">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 header-nav-links">
+                        <li class="nav-item">
+                            <a class="nav-link px-3 header-link active" href="index.html" data-page="inicio" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 header-link" href="catalogo/catalogo.html" data-page="catalogo">Catálogo</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 header-link" href="quienes-somos/index.html"
+                                data-page="quienes-somos">Quiénes Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link px-3 header-link" href="contactanos/index.html"
+                                data-page="contactanos">Contáctanos</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex flex-column flex-lg-row align-items-lg-center gap-2 gap-lg-3 mt-3 mt-lg-0 header-actions-container">
+                        <form class="header-search-form position-relative w-100" role="search" id="header-search-form">
+                            <i class="bi bi-search header-search-icon position-absolute top-50 translate-middle-y pe-none"></i>
+                            <input class="form-control rounded-pill header-search-input" type="search"
+                                placeholder="Buscar hoodies, joyas..." aria-label="Buscar productos" id="header-search-input">
+                        </form>
+
+                        <div class="d-flex align-items-center gap-1 gap-lg-2 header-icon-group">
+                            <button class="header-action-btn" type="button" aria-label="Favoritos" title="Favoritos" id="header-wishlist-btn">
+                                <i class="bi bi-heart"></i>
+                            </button>
+
+                            <a class="header-action-btn" href="carrito/index.html" aria-label="Carrito de compras" title="Carrito de compras" id="header-cart-btn">
+                                <i class="bi bi-bag"></i>
+                                <span class="header-cart-badge" id="header-cart-count">0</span>
+                            </a>
+
+                            <button class="header-action-btn" type="button" aria-label="Mi Cuenta" title="Mi Cuenta" id="header-user-btn">
+                                <i class="bi bi-person"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contenedor principal" id="contenido de inicio">
         <section class="container hero-seccion">
             <div class="hero-banner">
                 <span class="insignia insignia-salvia">Nueva colección</span>
@@ -25,70 +86,145 @@
                     Ropa y accesorios con precios en pesos, envíos claros y atención real.
                 </p>
                 <div class="hero-botones">
-                    <a href="catalogo/index.html" class="boton boton-primario">Ver catálogo</a>
+                    <a href="catalogo/catalogo.html" class="boton boton-primario">Ver catálogo</a>
                     <a href="contactanos/index.html" class="boton boton-claro">Escríbenos</a>
                 </div>
             </div>
         </section>
 
-        <!-- conrainer 2: confianza para remendar error 3 -->
         <section class="container">
             <div class="modulo-confianza">
                 Envíos a todo el país • Pagos seguros con PSE, Addi o Wompi
             </div>
         </section>
 
-        <!-- container 3: Destacar Novedades como shein -->
         <section class="container seccion">
             <h2 class="seccion-titulo">Novedades</h2>
             <p class="seccion-subtitulo">Lo último que llegó a TrendyShop.</p>
             <div id="lista-novedades" class="row row-cols-2 row-cols-lg-4 g-3 g-lg-4"></div>
             <div class="text-center mt-4">
-            <a href="catalogo/index.html" class="boton boton-secundario">Ver todo el catálogo</a>
+                <a href="catalogo/catalogo.html" class="boton boton-secundario">Ver todo el catálogo</a>
             </div>
         </section>
 
-        <!-- Container 4: Tranquilidad enfoque en el error 2 y 3 -->
         <section class="container seccion">
             <h2 class="seccion-titulo">Compra con tranquilidad</h2>
             <div class="row g-3 g-lg-4 mt-1">
                 <div class="col-12 col-md-4">
-                <article class="confianza-tarjeta">
-                    <div class="confianza-icono"><i class="bi bi-truck"></i></div>
-                    <h3 class="confianza-titulo">Envíos claros</h3>
-                    <p>Te decimos el tiempo de entrega antes de pagar.</p>
+                    <article class="confianza-tarjeta">
+                        <div class="confianza-icono"><i class="bi bi-truck"></i></div>
+                        <h3 class="confianza-titulo">Envíos claros</h3>
+                        <p>Te decimos el tiempo de entrega antes de pagar.</p>
                     </article>
                 </div>
                 <div class="col-12 col-md-4">
                     <article class="confianza-tarjeta">
-                    <div class="confianza-icono"><i class="bi bi-arrow-return-left"></i></div>
-                    <h3 class="confianza-titulo">Devoluciones simples</h3>
-                    <p>Políticas fáciles de entender, sin letra pequeña.</p>
+                        <div class="confianza-icono"><i class="bi bi-arrow-return-left"></i></div>
+                        <h3 class="confianza-titulo">Devoluciones simples</h3>
+                        <p>Políticas fáciles de entender, sin letra pequeña.</p>
                     </article>
                 </div>
                 <div class="col-12 col-md-4">
                     <article class="confianza-tarjeta">
-                    <div class="confianza-icono"><i class="bi bi-chat-dots"></i></div>
-                    <h3 class="confianza-titulo">Atención real</h3>
-                    <p>Escríbenos desde el formulario y te respondemos.</p>
+                        <div class="confianza-icono"><i class="bi bi-chat-dots"></i></div>
+                        <h3 class="confianza-titulo">Atención real</h3>
+                        <p>Escríbenos desde el formulario y te respondemos.</p>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- boton volver arriba y queda fijo -->
         <button id="btn-subir" class="btn-subir d-none" aria-label="Volver arriba">
             <i class="bi bi-arrow-up"></i>
         </button>
-
     </main>
-<!-- Falta el footer -->
-    <footer class="bloque pie" id="pie del sitio"></footer>
+
+    <footer class="bloque pie" id="pie del sitio">
+        <div class="site-footer border-top pt-5 pb-4 mt-auto">
+            <div class="container-xl">
+                <div class="row g-4 pb-4 border-bottom footer-border-bottom">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a class="d-inline-flex align-items-center gap-2 text-decoration-none user-select-none mb-3 footer-logo-link"
+                            href="index.html" id="footer-logo-link">
+                            <img src="assets/images/logo-icon.png" alt="TrendyShop" class="footer-logo-icon"
+                                id="footer-logo-img">
+                            <div class="d-flex align-items-baseline">
+                                <span class="logo-part-trendy">TRENDY</span><span class="logo-part-shop">SHOP</span>
+                                <span class="logo-part-country">COLOMBIA</span>
+                            </div>
+                        </a>
+
+                        <p class="text-secondary small mb-3 footer-brand-desc">
+                            Moda urbana con identidad colombiana y las mejores prendas de confeccion nacional.
+                        </p>
+
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge footer-badge">Bogotá</span>
+                            <span class="badge footer-badge">Medellín</span>
+                            <span class="badge footer-badge">Envíos Colombia</span>
+                        </div>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-2 ms-lg-auto">
+                        <h6 class="fw-bold text-dark mb-3">Servicio al Cliente</h6>
+                        <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Envíos &amp;
+                                    Devoluciones</a></li>
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Guía de Tallas</a></li>
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Términos y Condiciones</a>
+                            </li>
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Superintendencia de
+                                    Industria y Comercio</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-6 col-md-6 col-lg-2">
+                        <h6 class="fw-bold text-dark mb-3">Compañía</h6>
+                        <ul class="list-unstyled small d-flex flex-column gap-2 mb-0">
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Nuestras Tiendas</a></li>
+                            <li><a class="text-secondary text-decoration-none footer-link" href="quienes-somos/index.html"
+                                    id="footer-about-link">Quiénes Somos</a></li>
+                            <li><a class="footer-link-highlight text-decoration-none fw-semibold" href="contactanos/index.html"
+                                    id="footer-contact-link">Contáctanos</a></li>
+                            <li><a class="text-secondary text-decoration-none footer-link" href="#">Sostenibilidad &amp;
+                                    Algodón</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <h6 class="fw-bold text-dark mb-3">Pagos Seguros Colombia</h6>
+                        <p class="text-secondary small mb-2">
+                            Transacciones cifradas y protegidas con los principales métodos locales:
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge bg-white border text-dark fw-bold px-2 py-1">PSE</span>
+                            <span class="badge bg-white border text-nequi fw-bold px-2 py-1">Nequi</span>
+                            <span class="badge bg-white border text-addi fw-bold px-2 py-1">Addi</span>
+                            <span class="badge bg-white border text-dark fw-bold px-2 py-1">Bancolombia</span>
+                            <span class="badge bg-white border text-dark fw-bold px-2 py-1">Visa / MC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 pt-3 small text-secondary">
+                    <p class="mb-0 text-center text-md-start">© 2026 TrendyShop Colombia S.A.S. NIT: 111.222.333-1. Bogotá y
+                        Medellín.</p>
+                    <div class="d-flex align-items-center gap-3">
+                        <a class="text-secondary text-decoration-none footer-link" href="#">Privacidad</a>
+                        <a class="text-secondary text-decoration-none footer-link" href="#">Habeas Data</a>
+                        <a class="text-secondary text-decoration-none footer-link" href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="services/cartService.js"></script>
     <script src="js/components/header.js"></script>
     <script src="js/components/footer.js"></script>
     <script src="js/main.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
