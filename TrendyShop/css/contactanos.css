@@ -1,0 +1,90 @@
+body {
+    background-color: var(--lienzo);
+    color: var(--carbon);
+}
+
+.card {
+    background-color: var(--superficie) !important;
+    border: 1px solid var(--borde-tarjeta) !important;
+    border-radius: var(--radio) !important;
+    box-shadow: var(--sombra-1) !important;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+
+
+.card:hover {
+    box-shadow: var(--sombra-2) !important;
+}
+
+
+.btn-danger {
+    background-color: var(--coral) !important;
+    border-color: var(--coral) !important;
+    color: #FFFFFF !important;
+    border-radius: var(--radio) !important;
+}
+
+
+.btn-danger:hover {
+    background-color: var(--coral-hover) !important;
+    border-color: var(--coral-hover) !important;
+}
+
+h2, h3, h5{
+    color: var(--carbon);
+}
+h6{
+    color: var(--coral) !important;
+}
+
+.text-muted {
+    color: var(--carbon-suave) !important;
+}
+
+.form-control, .form-select {
+    background-color: var(--superficie);
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    color: var(--carbon);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--coral);
+    box-shadow: 0 0 0 0.25rem rgba(255, 90, 78, 0.15);
+}
+
+.mb-2 h6{
+    color: var(--coral) !important;
+}
+.accordion-item {
+    background-color: var(--superficie) !important;
+    border: 1px solid var(--borde-tarjeta) !important;
+    border-radius: var(--radio) !important;
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+
+.accordion-button {
+    background-color: var(--superficie) !important;
+    color: var(--carbon) !important;
+    font-weight: 600;
+    box-shadow: none !important; 
+    border-radius: var(--radio) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--coral-hover) !important; 
+    color: var(--carbon) !important;
+}
+
+.accordion-button::after {
+    filter: brightness(0.5); 
+}
+
+.accordion-body {
+    background-color: var(--superficie);
+    color: var(--carbon-suave);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
