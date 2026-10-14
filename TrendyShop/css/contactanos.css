@@ -11,27 +11,27 @@ body {
     transition: box-shadow 0.2s ease-in-out;
 }
 
+
+
 .card:hover {
     box-shadow: var(--sombra-2) !important;
 }
 
-.btn-primary, 
-.btn-danger, 
-.theme-primary {
+
+.btn-danger {
     background-color: var(--coral) !important;
     border-color: var(--coral) !important;
     color: #FFFFFF !important;
     border-radius: var(--radio) !important;
 }
 
-.btn-primary:hover, 
-.btn-danger:hover, 
-.theme-primary:hover {
+
+.btn-danger:hover {
     background-color: var(--coral-hover) !important;
     border-color: var(--coral-hover) !important;
 }
 
-h2, h3, h4, h5{
+h2, h3, h5{
     color: var(--carbon);
 }
 h6{
@@ -52,4 +52,39 @@ h6{
 .form-control:focus, .form-select:focus {
     border-color: var(--coral);
     box-shadow: 0 0 0 0.25rem rgba(255, 90, 78, 0.15);
+}
+
+.mb-2 h6{
+    color: var(--coral) !important;
+}
+.accordion-item {
+    background-color: var(--superficie) !important;
+    border: 1px solid var(--borde-tarjeta) !important;
+    border-radius: var(--radio) !important;
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+
+.accordion-button {
+    background-color: var(--superficie) !important;
+    color: var(--carbon) !important;
+    font-weight: 600;
+    box-shadow: none !important; 
+    border-radius: var(--radio) !important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--coral-hover) !important; 
+    color: var(--carbon) !important;
+}
+
+.accordion-button::after {
+    filter: brightness(0.5); 
+}
+
+.accordion-body {
+    background-color: var(--superficie);
+    color: var(--carbon-suave);
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
