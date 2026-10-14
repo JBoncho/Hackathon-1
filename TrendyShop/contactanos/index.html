@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos - TrendyShop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/TrendyShop/css/contactanos.css">
+    <link rel="stylesheet" href="/TrendyShop/css/global.css">
+    <link rel="stylesheet" href="/TrendyShop/css/components/header.css">
+    <link rel="stylesheet" href="/TrendyShop/css/components/footer.css">
+</head>
+
+<body>
+
+    <header class="bloque cabecera" id="encabezado del sitio">
+
+    </header>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-12">
+                <h2 id="text-title" class="fw-bold">Estamos para ayudarte</h2>
+                <p class="text-muted">
+                    Escríbenos si necesitas recibir asesoría personalizada, tienes algún reclamo o inquietud. <br>
+                    Respuesta rápida garantizada.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <div class="card border-0 shadow-sm p-4">
+                    <h3 class="mb-4">Envíanos un mensaje</h3>
+                    
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        
+                        <div class="mb-3">
+                            <label for="nombreCompleto" class="form-label">Nombre completo *</label>
+                            <input type="text" class="form-control" id="nombreCompleto" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu nombre completo.
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="correoElectronico" class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" id="correoElectronico"required>
+                            <div class="invalid-feedback">
+                                Ingresa un correo válido (ej: nombre@dominio.com).
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefonoCelular" class="form-label">Número de WhatsApp / Celular (Opcional)</label>
+                            <input type="tel" class="form-control" id="telefonoCelular" >
+                            <div class="form-text">Usaremos tu número únicamente para coordinar tu requerimiento de entrega.</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="motivoSolicitud" class="form-label">Motivo de la solicitud</label>
+                            <select class="form-select" id="motivoSolicitud">
+                                <option selected disabled value="">Elige un Motivo</option>
+                                <option value="estado_pedido">Estado y guía de mi pedido</option>
+                                <option value="cambios">Cambios y devoluciones</option>
+                                <option value="tallas">Asesoría personalizada</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensajeTexto" class="form-label">Mensaje *</label>
+                            <textarea class="form-control" id="mensajeTexto" rows="4" placeholder="Cuéntanos con detalle tu consulta." maxlength="500" required></textarea>
+                            <div class="invalid-feedback">
+                                Por favor escribe tu mensaje (máx. 500 caracteres).
+                            </div>
+                        </div>
+
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="habeasDataCheck" required>
+                            <label class="form-check-label small" for="habeasDataCheck">
+                                Acepto la Política de Tratamiento de Datos Personales de TrendyShop Colombia.
+                            </label>
+                            <div class="invalid-feedback">
+                                Debes aceptar la política de tratamiento de datos para continuar.
+                            </div>
+                        </div>
+
+                        <button class="btn btn-danger w-100 btn-solid theme-primary py-2" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                
+
+                <div class="card border-0 shadow-sm p-3 mb-4">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Canales de Atención Directa</h5>
+                            <span class="badge bg-success">En línea</span>
+                        </div>
+                        <div class="mb-2">
+                            <h6 class="text-muted small mb-1">Correo Electrónico</h6>
+                            <p class="mb-1 text-dark fw-semibold">soporte@trendyshop.com.co</p>
+                            <p class="mb-2 text-dark fw-semibold">ventas@trendyshop.com.co</p>
+                        </div>
+
+                        <div class="mb-2">
+                            <h6 class="text-muted small mb-1">Líneas Telefónicas</h6>
+                            <p class="mb-1 text-dark">Bogotá: <strong>(601) 745 2890</strong></p>
+                            <p class="mb-2 text-dark">Medellín: <strong>(604) 448 1230</strong></p>
+                        </div>
+
+                        <div class="mb-2">
+                            <h6 class="text-muted small mb-1">Horarios de atención:</h6>
+                            <p class="mb-1 small text-muted">Lunes a Sábado: 8:00 am - 8:00 pm</p>
+                            <p class="mb-0 small text-muted">Domingos y Festivos: 10:00 am - 5:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm p-3">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h5 class="card-title mb-0">Nuestros Showrooms</h5>
+                            <span class="text-muted small">4 Tiendas Físicas</span>
+                        </div>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <div class="p-2 border rounded bg-light">
+                                    <h6 class="small fw-bold mb-1">Chapinero</h6>
+                                    <p class="text-muted x-small mb-0" style="font-size: 0.75rem;">Cra 13 # 85-32 (Zona Rosa)<br>Bogotá D.C.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-2 border rounded bg-light">
+                                    <h6 class="small fw-bold mb-1">Usaquén </h6>
+                                    <p class="text-muted x-small mb-0" style="font-size: 0.75rem;">Cra 6 # 118-20 (Plaza Usaquén)<br>Bogotá D.C.</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-2 border rounded bg-light">
+                                    <h6 class="small fw-bold mb-1">El Poblado</h6>
+                                    <p class="text-muted x-small mb-0" style="font-size: 0.75rem;">Cra 37 # 8A-42 (Vía Primavera)<br>Medellín, Antioquia</p>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-2 border rounded bg-light">
+                                    <h6 class="small fw-bold mb-1">Laureles </h6>
+                                    <p class="text-muted x-small mb-0" style="font-size: 0.75rem;">Av. Nutibara # 73-15<br>Medellín, Antioquia</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row text-center mb-4">
+            <div class="col-12">
+                <span class="badge bg-success border mb-2 px-3 py-1 rounded-pill">Respuestas inmediatas</span>
+                <h3 class="fw-bold">Resolvemos tus dudas al instante</h3>
+                <p class="text-muted">Todo lo que necesitas saber antes de comprar o sobre tu orden en curso en Colombia.</p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item mb-3 border shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                ¿Cuánto tardan los envíos y cuál es el costo?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Los tiempos de entrega varían entre 2 a 5 días hábiles dependiendo de la ciudad destino en Colombia. Contamos con envíos nacionales.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item mb-3 border shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                ¿Cómo funciona la política de cambios y devoluciones?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Tienes hasta 30 días calendario después de realizada tu compra para solicitar cambios de prendas por talla o color de forma sencilla.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item mb-3 border shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                ¿Cómo saber mi talla exacta en hoodies, camisetas y cadenas?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body text-muted">
+                                Puedes consultar nuestra guía de tallas detallada ubicada en el menú superior o en la descripción de cada producto.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bloque pie" id="pie del sitio">
+    
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/TrendyShop/js/contactanos.js"></script>
+    <script src="/TrendyShop/js/components/header.js"></script>
+    <script src="/TrendyShop/js/components/footer.js"></script>
+</body>
+
+</html>
