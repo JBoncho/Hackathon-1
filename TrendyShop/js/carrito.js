@@ -1,10 +1,10 @@
-/* Logica interactiva del carrito de compras */
+/* Controlador visual e interactivo de la vista del carrito */
 const controladorCarrito = {
-    "formatear precio": function(monto) {
-        return "$" + monto.toLocaleString("es-CO") + " COP";
+    formatearPrecio: function(monto) {
+        return "$" + Number(monto).toLocaleString("es-CO") + " COP";
     },
 
-    "renderizar carrito": function() {
+    renderizarCarrito: function() {
         const contenedorArticulos = document.getElementById("lista de articulos");
         const vistaConArticulos = document.getElementById("vista con articulos");
         const vistaCarritoVacio = document.getElementById("vista carrito vacio");
@@ -15,7 +15,7 @@ const controladorCarrito = {
             return;
         }
 
-        const articulos = window["servicio carrito"]["cargar carrito"]();
+        const articulos = window.cartService ? window.cartService.cargarCarrito() : [];
 
         if (articulos.length === 0) {
             vistaConArticulos.style.display = "none";
@@ -31,16 +31,22 @@ const controladorCarrito = {
             const tarjeta = document.createElement("article");
             tarjeta.className = "tarjeta articulo";
 
+            const elementoImagen = document.createElement("img");
+            elementoImagen.className = "imagen articulo";
+            elementoImagen.src = item.imagen || item.thumbnail || "../assets/images/logo-icon.png";
+            elementoImagen.alt = item.nombre || item.title || "Prenda";
+            elementoImagen.loading = "lazy";
+
             const detalles = document.createElement("div");
             detalles.className = "detalles articulo";
 
             const titulo = document.createElement("h3");
             titulo.className = "nombre articulo";
-            titulo.textContent = item["nombre"];
+            titulo.textContent = item.nombre || item.title;
 
             const precio = document.createElement("p");
             precio.className = "precio articulo";
-            precio.textContent = controladorCarrito["formatear precio"](item["precio"]);
+            precio.textContent = controladorCarrito.formatearPrecio(item.precio !== undefined ? item.precio : item.price);
 
             const controles = document.createElement("div");
             controles.className = "controles articulo";
@@ -53,19 +59,19 @@ const controladorCarrito = {
             botonMenos.className = "boton cantidad boton restar";
             botonMenos.textContent = "-";
             botonMenos.addEventListener("click", function() {
-                controladorCarrito["modificar cantidad"](item["identificador"], item["cantidad"] - 1);
+                controladorCarrito.modificarCantidad(item.id || item.identificador, (item.cantidad || item.quantity) - 1);
             });
 
             const numero = document.createElement("span");
             numero.className = "numero cantidad";
-            numero.textContent = item["cantidad"];
+            numero.textContent = item.cantidad || item.quantity;
 
             const botonMas = document.createElement("button");
             botonMas.type = "button";
             botonMas.className = "boton cantidad boton sumar";
             botonMas.textContent = "+";
             botonMas.addEventListener("click", function() {
-                controladorCarrito["modificar cantidad"](item["identificador"], item["cantidad"] + 1);
+                controladorCarrito.modificarCantidad(item.id || item.identificador, (item.cantidad || item.quantity) + 1);
             });
 
             selector.appendChild(botonMenos);
@@ -77,7 +83,7 @@ const controladorCarrito = {
             botonEliminar.className = "boton eliminar";
             botonEliminar.innerHTML = '<i class="bi bi-trash"></i> Eliminar';
             botonEliminar.addEventListener("click", function() {
-                controladorCarrito["remover producto"](item["identificador"]);
+                controladorCarrito.removerProducto(item.id || item.identificador);
             });
 
             controles.appendChild(selector);
@@ -87,57 +93,62 @@ const controladorCarrito = {
             detalles.appendChild(precio);
             detalles.appendChild(controles);
 
+            tarjeta.appendChild(elementoImagen);
             tarjeta.appendChild(detalles);
             contenedorArticulos.appendChild(tarjeta);
         });
 
-        const totalCalculado = window["servicio carrito"]["obtener total"]();
-        const totalFormateado = controladorCarrito["formatear precio"](totalCalculado);
+        const totalCalculado = window.cartService ? window.cartService.obtenerTotal() : 0;
+        const totalFormateado = controladorCarrito.formatearPrecio(totalCalculado);
 
         if (textoSubtotal) {
             textoSubtotal.textContent = totalFormateado;
         }
-
         if (textoTotal) {
             textoTotal.textContent = totalFormateado;
         }
     },
 
-    "modificar cantidad": function(identificador, nuevaCantidad) {
-        window["servicio carrito"]["actualizar cantidad"](identificador, nuevaCantidad);
-        controladorCarrito["renderizar carrito"]();
-        if (window["actualizar contador global"]) {
-            window["actualizar contador global"]();
+    modificarCantidad: function(identificador, nuevaCantidad) {
+        if (window.cartService) {
+            window.cartService.actualizarCantidad(identificador, nuevaCantidad);
         }
+        controladorCarrito.renderizarCarrito();
     },
 
-    "remover producto": function(identificador) {
-        window["servicio carrito"]["eliminar producto"](identificador);
-        controladorCarrito["renderizar carrito"]();
-        if (window["actualizar contador global"]) {
-            window["actualizar contador global"]();
+    removerProducto: function(identificador) {
+        if (window.cartService) {
+            window.cartService.eliminarProducto(identificador);
         }
+        controladorCarrito.renderizarCarrito();
     },
 
-    "iniciar": function() {
-        controladorCarrito["renderizar carrito"]();
+    iniciar: function() {
+        controladorCarrito.renderizarCarrito();
+
+        window.addEventListener("trendy:cart-updated", function() {
+            controladorCarrito.renderizarCarrito();
+        });
 
         const botonPagar = document.getElementById("boton proceder pago");
         if (botonPagar) {
             botonPagar.addEventListener("click", function() {
                 alert("Gracias por tu compra en TrendyShop. Tu pedido sera despachado en cuarenta y ocho horas.");
-                window["servicio carrito"]["vaciar carrito"]();
-                controladorCarrito["renderizar carrito"]();
-                if (window["actualizar contador global"]) {
-                    window["actualizar contador global"]();
+                if (window.cartService) {
+                    window.cartService.vaciarCarrito();
                 }
+                controladorCarrito.renderizarCarrito();
             });
         }
     }
 };
 
-/* Inicializacion automatica al cargar el DOM */
-document.addEventListener("DOMContentLoaded", controladorCarrito["iniciar"]);
+/* Referencias de compatibilidad */
+controladorCarrito["formatear precio"] = controladorCarrito.formatearPrecio;
+controladorCarrito["renderizar carrito"] = controladorCarrito.renderizarCarrito;
+controladorCarrito["modificar cantidad"] = controladorCarrito.modificarCantidad;
+controladorCarrito["remover producto"] = controladorCarrito.removerProducto;
+controladorCarrito["iniciar"] = controladorCarrito.iniciar;
 
-/* Publicacion en el ambito global */
+document.addEventListener("DOMContentLoaded", controladorCarrito.iniciar);
 window["controlador carrito"] = controladorCarrito;
